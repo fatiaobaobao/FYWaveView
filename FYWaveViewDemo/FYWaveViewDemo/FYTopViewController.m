@@ -22,9 +22,10 @@
     self.view.width = [UIScreen mainScreen].bounds.size.width;
     [self.view layoutIfNeeded];
     // Do any additional setup after loading the view from its nib.
-    self.waveView = [FYWaveView addToView:self.topView withFrame:CGRectMake(0, 20, self.view.width, 15) topMargin:35 waveNumber:2];
+    self.waveView = [FYWaveView addToView:self.topView withFrame:CGRectMake(0, 20, self.view.width, 15) topMargin:30 waveNumber:2];
     self.waveView.waveSpeed = 1.5;
     self.waveView.angularSpeed = 1.2;
+    self.waveView.isToLeft = YES;
     [self.waveView wave];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:4 target:self selector:@selector(changeHeight) userInfo:nil repeats:YES];
 }
@@ -49,10 +50,7 @@
         });
     }
 }
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 - (IBAction)back:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }

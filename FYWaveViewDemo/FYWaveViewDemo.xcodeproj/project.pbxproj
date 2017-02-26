@@ -21,6 +21,8 @@
 		6DF0EAE51E612904005D4472 /* FYWaveProgressController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DF0EAE31E612904005D4472 /* FYWaveProgressController.xib */; };
 		6DF0EAE91E6131EA005D4472 /* FYTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF0EAE71E6131EA005D4472 /* FYTopViewController.m */; };
 		6DF0EAEA1E6131EA005D4472 /* FYTopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DF0EAE81E6131EA005D4472 /* FYTopViewController.xib */; };
+		6DF0EAEE1E626D66005D4472 /* FYUserPhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF0EAEC1E626D66005D4472 /* FYUserPhotoController.m */; };
+		6DF0EAEF1E626D66005D4472 /* FYUserPhotoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DF0EAED1E626D66005D4472 /* FYUserPhotoController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,9 @@
 		6DF0EAE61E6131EA005D4472 /* FYTopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYTopViewController.h; sourceTree = "<group>"; };
 		6DF0EAE71E6131EA005D4472 /* FYTopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYTopViewController.m; sourceTree = "<group>"; };
 		6DF0EAE81E6131EA005D4472 /* FYTopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FYTopViewController.xib; sourceTree = "<group>"; };
+		6DF0EAEB1E626D66005D4472 /* FYUserPhotoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FYUserPhotoController.h; sourceTree = "<group>"; };
+		6DF0EAEC1E626D66005D4472 /* FYUserPhotoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FYUserPhotoController.m; sourceTree = "<group>"; };
+		6DF0EAED1E626D66005D4472 /* FYUserPhotoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FYUserPhotoController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +133,9 @@
 				6DF0EAE61E6131EA005D4472 /* FYTopViewController.h */,
 				6DF0EAE71E6131EA005D4472 /* FYTopViewController.m */,
 				6DF0EAE81E6131EA005D4472 /* FYTopViewController.xib */,
+				6DF0EAEB1E626D66005D4472 /* FYUserPhotoController.h */,
+				6DF0EAEC1E626D66005D4472 /* FYUserPhotoController.m */,
+				6DF0EAED1E626D66005D4472 /* FYUserPhotoController.xib */,
 				6DF0EAAB1E612109005D4472 /* Main.storyboard */,
 				6DF0EAAE1E612109005D4472 /* Assets.xcassets */,
 				6DF0EAB01E612109005D4472 /* LaunchScreen.storyboard */,
@@ -279,6 +287,7 @@
 			files = (
 				6DF0EAEA1E6131EA005D4472 /* FYTopViewController.xib in Resources */,
 				6DF0EAB21E612109005D4472 /* LaunchScreen.storyboard in Resources */,
+				6DF0EAEF1E626D66005D4472 /* FYUserPhotoController.xib in Resources */,
 				6DF0EAAF1E612109005D4472 /* Assets.xcassets in Resources */,
 				6DF0EAAD1E612109005D4472 /* Main.storyboard in Resources */,
 				6DF0EAE51E612904005D4472 /* FYWaveProgressController.xib in Resources */,
@@ -312,6 +321,7 @@
 				6DF0EAAA1E612109005D4472 /* ViewController.m in Sources */,
 				6DF0EAE41E612904005D4472 /* FYWaveProgressController.m in Sources */,
 				6DF0EAA71E612109005D4472 /* AppDelegate.m in Sources */,
+				6DF0EAEE1E626D66005D4472 /* FYUserPhotoController.m in Sources */,
 				6DF0EAA41E612109005D4472 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -538,6 +548,7 @@
 				6DF0EACE1E612109005D4472 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6DF0EACF1E612109005D4472 /* Build configuration list for PBXNativeTarget "FYWaveViewDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +557,7 @@
 				6DF0EAD11E612109005D4472 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6DF0EAD21E612109005D4472 /* Build configuration list for PBXNativeTarget "FYWaveViewDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -554,6 +566,7 @@
 				6DF0EAD41E612109005D4472 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

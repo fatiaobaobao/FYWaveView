@@ -17,13 +17,15 @@
 @property (assign, nonatomic) CGFloat bottomMargin;
 @property (assign, nonatomic) CGFloat topMargin;
 @property (strong, nonatomic) NSMutableArray *shapeLayerArray;
+@property (assign, nonatomic) BOOL isToLeft;//波浪方向
+@property (copy, nonatomic) void (^centerTopBlock)(CGFloat top);//波浪方向
 /**
- *  @param frame的高度就是波浪的高度 不包括底部距下边界距离
+ *  @param frame的高度就是波浪的高度 不包括底部距下边界距离 y是正弦线中轴的纵坐标
  *  @param bottomMargin 波浪底部距下边界距离
  */
 + (instancetype)addToView:(UIView *)view withFrame:(CGRect)frame bottomMargin:(CGFloat)bottomMargin waveNumber:(NSInteger)waveNumber;
 /**
- *  @param frame的高度就是波浪的高度 不包括底部距下边界距离
+ *  @param frame的高度就是波浪的高度 不包括底部距上边界距离 y是正弦线中轴的纵坐标
  *  @param topMargin 波浪底部距上边界距离
  */
 + (instancetype)addToView:(UIView *)view withFrame:(CGRect)frame topMargin:(CGFloat)topMargin waveNumber:(NSInteger)waveNumber;

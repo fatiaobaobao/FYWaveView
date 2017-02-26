@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "FYWaveProgressController.h"
 #import "FYTopViewController.h"
+#import "FYUserPhotoController.h"
 @interface ViewController () <UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong,nonatomic) NSArray *titleArray;
@@ -17,7 +18,7 @@
 @implementation ViewController
 - (NSArray *)titleArray{
     if (!_titleArray) {
-        _titleArray = @[@"波浪进度条",@"顶部波浪线(仿淘宝)"];
+        _titleArray = @[@"波浪进度条",@"顶部波浪线(仿淘宝)",@"头像随波浪浮动"];
     }
     return _titleArray;
 }
@@ -30,7 +31,7 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return 3;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -52,6 +53,11 @@
         case 1:
         {
             [self.navigationController pushViewController:[FYTopViewController new] animated:YES];
+        }
+            break;
+        case 2:
+        {
+            [self.navigationController pushViewController:[FYUserPhotoController new] animated:YES];
         }
             break;
             
