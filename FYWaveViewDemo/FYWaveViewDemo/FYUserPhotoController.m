@@ -36,6 +36,9 @@
     [self.waveView wave];
     
 }
+- (IBAction)back:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

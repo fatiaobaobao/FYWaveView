@@ -11,7 +11,7 @@
 @interface FYWaveView ()
 @property (assign, nonatomic) CGFloat offsetX;
 @property (strong, nonatomic) CADisplayLink *waveDisplayLink;
-
+@property (strong, nonatomic) NSMutableArray *shapeLayerArray;
 
 
 @end
@@ -136,9 +136,10 @@
 }
 - (void)setupShapeLayer
 {
-    for (CAShapeLayer *shapeLayer in self.shapeLayerArray) {
-        shapeLayer.strokeColor = self.waveColor.CGColor;
-        shapeLayer.fillColor = self.waveShaDowColor.CGColor;
+    for (int i=0; i<self.shapeLayerArray.count; i++) {
+        CAShapeLayer *shapeLayer = self.shapeLayerArray[i];
+        shapeLayer.strokeColor = self.waveColors.count==0 ? self.waveColor.CGColor : [self.waveColors[i] CGColor];
+        shapeLayer.fillColor =  self.waveShaDowColors.count==0 ? self.waveShaDowColor.CGColor : [self.waveShaDowColors[i] CGColor];
         shapeLayer.lineWidth = 0.5;
         [self.layer addSublayer:shapeLayer];
     }
