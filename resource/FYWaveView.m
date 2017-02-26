@@ -11,7 +11,7 @@
 @interface FYWaveView ()
 @property (assign, nonatomic) CGFloat offsetX;
 @property (strong, nonatomic) CADisplayLink *waveDisplayLink;
-
+@property (strong, nonatomic) NSMutableArray *shapeLayerArray;
 
 
 @end
@@ -98,7 +98,15 @@
         CGFloat y = 0.f;
         for (CGFloat x = 0.f; x <= width; x++) {
             CGFloat interval = self.waveNumber==2?M_PI:M_PI_2;
-            y = (height/2) *sin(0.0167*(self.angularSpeed * x + self.offsetX) + i* interval);
+            if (self.isToLeft) {
+                y = (height/2) *sin(0.0167*(self.angularSpeed * x - self.offsetX) + i* interval);
+            }else{
+                y = (height/2) *sin(0.0167*(self.angularSpeed * x + self.offsetX) + i* interval);
+            }
+            if(x == width/2) {
+                !self.centerTopBlock?:self.centerTopBlock(self.bounds.size.height/2 - y + self.bottomMargin);
+            }
+            
             [bezierPath addLineToPoint:CGPointMake(x, y - self.bottomMargin)];
         }
         if (self.topMargin>0) {
@@ -128,9 +136,10 @@
 }
 - (void)setupShapeLayer
 {
-    for (CAShapeLayer *shapeLayer in self.shapeLayerArray) {
-        shapeLayer.strokeColor = self.waveColor.CGColor;
-        shapeLayer.fillColor = self.waveShaDowColor.CGColor;
+    for (int i=0; i<self.shapeLayerArray.count; i++) {
+        CAShapeLayer *shapeLayer = self.shapeLayerArray[i];
+        shapeLayer.strokeColor = self.waveColors.count==0 ? self.waveColor.CGColor : [self.waveColors[i] CGColor];
+        shapeLayer.fillColor =  self.waveShaDowColors.count==0 ? self.waveShaDowColor.CGColor : [self.waveShaDowColors[i] CGColor];
         shapeLayer.lineWidth = 0.5;
         [self.layer addSublayer:shapeLayer];
     }
