@@ -19,7 +19,7 @@
 @property (assign, nonatomic) CGFloat bottomMargin;
 @property (assign, nonatomic) CGFloat topMargin;
 @property (assign, nonatomic) BOOL isToLeft;//波浪方向
-@property (copy, nonatomic) void (^centerTopBlock)(CGFloat top);//波浪方向
+@property (copy, nonatomic) void (^centerTopBlock)(CGFloat top);//波浪中心点y值
 /**
  *  @param frame的高度就是波浪的高度 不包括底部距下边界距离 y是当bottomMargin等于0时的正弦线中轴的纵坐标
  *  @param bottomMargin 波浪底部距下边界距离
